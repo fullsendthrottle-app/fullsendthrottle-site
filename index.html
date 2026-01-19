@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FullSendThrottle – Coming Soon</title>
-  <meta name="description" content="FullSendThrottle – Motocross / Enduro service app. Coming soon." />
+  <title>FullSendThrottle – Android Testers Wanted</title>
+  <meta name="description" content="FullSendThrottle – Motocross / Enduro service app. Android testers wanted." />
 
   <style>
     :root {
@@ -112,33 +112,94 @@
       color: var(--muted);
       letter-spacing: 1.4px;
       font-weight: 500;
+      text-transform: none;
     }
 
-    .socials {
+    .info {
+      max-width: 720px;
+      margin: 14px auto 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .features {
+      list-style: none;
+      padding: 0;
+      margin: 18px auto 0;
+      max-width: 720px;
+      display: grid;
+      gap: 10px;
+      text-align: left;
+    }
+
+    .features li {
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(18,18,25,0.45);
+      border-radius: 14px;
+      padding: 12px 14px;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .check {
+      width: 22px;
+      height: 22px;
+      border-radius: 7px;
+      border: 1px solid var(--border);
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      margin-top: 1px;
+    }
+
+    .check svg {
+      width: 14px;
+      height: 14px;
+      fill: var(--red);
+      filter: drop-shadow(0 0 10px rgba(255,30,30,0.35));
+    }
+
+    .cta {
       margin-top: 22px;
       display: flex;
       justify-content: center;
-      gap: 14px;
+      gap: 12px;
       flex-wrap: wrap;
     }
 
-    .socials a {
+    .btn {
       text-decoration: none;
       color: var(--text);
-      padding: 10px 16px;
-      border-radius: 12px;
+      padding: 12px 18px;
+      border-radius: 14px;
       border: 1px solid rgba(255,255,255,0.15);
       background: rgba(18,18,25,0.55);
       font-size: 14px;
       letter-spacing: 0.6px;
       transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
     }
 
-    .socials a:hover {
+    .btn:hover {
       border-color: var(--red);
       color: var(--red);
       transform: translateY(-2px);
       box-shadow: 0 8px 30px rgba(255,30,30,0.25);
+    }
+
+    .btn.primary {
+      border-color: var(--border);
+      background: linear-gradient(180deg, rgba(255,30,30,0.18), rgba(18,18,25,0.55));
+    }
+
+    .btn small {
+      color: var(--muted);
+      letter-spacing: 0.3px;
+      font-size: 12px;
     }
 
     .contact {
@@ -181,20 +242,49 @@
     <p class="sub">Motocross / Enduro Service App</p>
 
     <div class="coming">
-      Coming Soon
-      <span>Android & iOS</span>
+      Android Testers Wanted
+      <span>Currently Android only • Cloud/sync planned later (not in the first release)</span>
     </div>
 
-    <div class="socials">
-      <a href="https://www.youtube.com/channel/UCi6HTPFsGDAXyG5thPdB8gQ" target="_blank" rel="noopener">YouTube</a>
-      <a href="https://www.tiktok.com/@fullsendthrottlex" target="_blank" rel="noopener">TikTok</a>
-      <a href="https://www.instagram.com/fullsendthrottle/" target="_blank" rel="noopener">Instagram</a>
-    </div>
+    <p class="info">
+      Want to help test the app and give feedback? Send an email and you’ll get the tester access/info.
+      The goal right now is to catch bugs, improve UX, and make the first release solid.
+    </p>
 
-    <div class="contact">
-      Contact:
-      <br />
-      <a href="mailto:fullsendthrottle@gmail.com">fullsendthrottle@gmail.com</a>
+    <ul class="features">
+      <li>
+        <span class="check">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
+        </span>
+        <div><strong>Track bike hours</strong><br><span style="color: var(--muted);">Manage multiple bikes and keep hours up to date.</span></div>
+      </li>
+      <li>
+        <span class="check">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
+        </span>
+        <div><strong>Service intervals</strong><br><span style="color: var(--muted);">See what’s due next and reset intervals when completed.</span></div>
+      </li>
+      <li>
+        <span class="check">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
+        </span>
+        <div><strong>Service history</strong><br><span style="color: var(--muted);">Log what you did and at which hours.</span></div>
+      </li>
+      <li>
+        <span class="check">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
+        </span>
+        <div><strong>Bike setup notes</strong><br><span style="color: var(--muted);">Save suspension/tire pressure notes and tweaks.</span></div>
+      </li>
+    </ul>
+
+    <div class="cta">
+      <a class="btn primary" href="mailto:fullsendthrottle@gmail.com?subject=FullSendThrottle%20Android%20Tester&body=Hey!%20I%27d%20like%20to%20become%20an%20Android%20tester%20for%20FullSendThrottle.%0A%0ADevice%3A%20%0AAndroid%20version%3A%20%0ACountry%3A%20%0A%0AThanks!">
+        Become a Tester <small>(email)</small>
+      </a>
+      <a class="btn" href="mailto:fullsendthrottle@gmail.com">
+        fullsendthrottle@gmail.com
+      </a>
     </div>
 
     <div class="footer">
